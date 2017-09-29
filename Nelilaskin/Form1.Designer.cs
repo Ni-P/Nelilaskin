@@ -1,6 +1,6 @@
 ﻿namespace Nelilaskin
 {
-    partial class Form1
+    partial class Nelilaskin
     {
         /// <summary>
         /// Required designer variable.
@@ -56,17 +56,19 @@
             // output
             // 
             this.output.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.output.CausesValidation = false;
             this.output.Font = new System.Drawing.Font("OpenSymbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.output.Location = new System.Drawing.Point(13, 13);
             this.output.MaximumSize = new System.Drawing.Size(200, 20);
             this.output.MaxLength = 20;
-            this.output.MinimumSize = new System.Drawing.Size(170, 0);
+            this.output.MinimumSize = new System.Drawing.Size(170, 4);
             this.output.Name = "output";
             this.output.ReadOnly = true;
-            this.output.Size = new System.Drawing.Size(195, 20);
+            this.output.Size = new System.Drawing.Size(195, 27);
             this.output.TabIndex = 0;
-            this.output.Text = "test 123";
+            this.output.Text = "0";
             this.output.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.output.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.output_KeyPress);
             // 
             // flowLayoutPanel1
             // 
@@ -90,7 +92,7 @@
             this.flowLayoutPanel1.Controls.Add(this.button18);
             this.flowLayoutPanel1.Controls.Add(this.button19);
             this.flowLayoutPanel1.Controls.Add(this.button20);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(13, 40);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(13, 60);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(188, 235);
             this.flowLayoutPanel1.TabIndex = 1;
@@ -103,6 +105,7 @@
             this.btn_1.TabIndex = 0;
             this.btn_1.Text = "1";
             this.btn_1.UseVisualStyleBackColor = true;
+            this.btn_1.Click += new System.EventHandler(this.setOne);
             // 
             // btn_2
             // 
@@ -112,6 +115,7 @@
             this.btn_2.TabIndex = 1;
             this.btn_2.Text = "2";
             this.btn_2.UseVisualStyleBackColor = true;
+            this.btn_2.Click += new System.EventHandler(this.setTwo);
             // 
             // btn_3
             // 
@@ -121,6 +125,7 @@
             this.btn_3.TabIndex = 2;
             this.btn_3.Text = "3";
             this.btn_3.UseVisualStyleBackColor = true;
+            this.btn_3.Click += new System.EventHandler(this.setThree);
             // 
             // btn_4
             // 
@@ -130,6 +135,7 @@
             this.btn_4.TabIndex = 3;
             this.btn_4.Text = "4";
             this.btn_4.UseVisualStyleBackColor = true;
+            this.btn_4.Click += new System.EventHandler(this.setFour);
             // 
             // btn_5
             // 
@@ -139,6 +145,7 @@
             this.btn_5.TabIndex = 4;
             this.btn_5.Text = "5";
             this.btn_5.UseVisualStyleBackColor = true;
+            this.btn_5.Click += new System.EventHandler(this.setFive);
             // 
             // btn_6
             // 
@@ -148,6 +155,7 @@
             this.btn_6.TabIndex = 5;
             this.btn_6.Text = "6";
             this.btn_6.UseVisualStyleBackColor = true;
+            this.btn_6.Click += new System.EventHandler(this.setSix);
             // 
             // btn_7
             // 
@@ -157,6 +165,7 @@
             this.btn_7.TabIndex = 6;
             this.btn_7.Text = "7";
             this.btn_7.UseVisualStyleBackColor = true;
+            this.btn_7.Click += new System.EventHandler(this.setSeven);
             // 
             // btn_8
             // 
@@ -166,6 +175,7 @@
             this.btn_8.TabIndex = 7;
             this.btn_8.Text = "8";
             this.btn_8.UseVisualStyleBackColor = true;
+            this.btn_8.Click += new System.EventHandler(this.setEight);
             // 
             // btn_9
             // 
@@ -175,6 +185,7 @@
             this.btn_9.TabIndex = 8;
             this.btn_9.Text = "9";
             this.btn_9.UseVisualStyleBackColor = true;
+            this.btn_9.Click += new System.EventHandler(this.setNine);
             // 
             // btn_0
             // 
@@ -184,6 +195,7 @@
             this.btn_0.TabIndex = 9;
             this.btn_0.Text = "0";
             this.btn_0.UseVisualStyleBackColor = true;
+            this.btn_0.Click += new System.EventHandler(this.setZero);
             // 
             // btn_equal
             // 
@@ -193,6 +205,7 @@
             this.btn_equal.TabIndex = 10;
             this.btn_equal.Text = "=";
             this.btn_equal.UseVisualStyleBackColor = true;
+            this.btn_equal.Click += new System.EventHandler(this.setEqual);
             // 
             // btn_addition
             // 
@@ -202,6 +215,7 @@
             this.btn_addition.TabIndex = 11;
             this.btn_addition.Text = "+";
             this.btn_addition.UseVisualStyleBackColor = true;
+            this.btn_addition.Click += new System.EventHandler(this.setAddition);
             // 
             // btn_subtraction
             // 
@@ -211,6 +225,7 @@
             this.btn_subtraction.TabIndex = 12;
             this.btn_subtraction.Text = "-";
             this.btn_subtraction.UseVisualStyleBackColor = true;
+            this.btn_subtraction.Click += new System.EventHandler(this.setSubtraction);
             // 
             // btn_multiplication
             // 
@@ -220,6 +235,7 @@
             this.btn_multiplication.TabIndex = 13;
             this.btn_multiplication.Text = "*";
             this.btn_multiplication.UseVisualStyleBackColor = true;
+            this.btn_multiplication.Click += new System.EventHandler(this.setMultiplication);
             // 
             // btn_division
             // 
@@ -229,6 +245,7 @@
             this.btn_division.TabIndex = 14;
             this.btn_division.Text = "/";
             this.btn_division.UseVisualStyleBackColor = true;
+            this.btn_division.Click += new System.EventHandler(this.setDivision);
             // 
             // btn_fraction
             // 
@@ -238,6 +255,7 @@
             this.btn_fraction.TabIndex = 15;
             this.btn_fraction.Text = ",";
             this.btn_fraction.UseVisualStyleBackColor = true;
+            this.btn_fraction.Click += new System.EventHandler(this.setFraction);
             // 
             // btn_clear
             // 
@@ -247,6 +265,7 @@
             this.btn_clear.TabIndex = 16;
             this.btn_clear.Text = "CE";
             this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.clearAll);
             // 
             // button18
             // 
@@ -275,16 +294,18 @@
             this.button20.Text = "button20";
             this.button20.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // Nelilaskin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(213, 287);
+            this.ClientSize = new System.Drawing.Size(213, 307);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.output);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.KeyPreview = true;
+            this.MaximizeBox = false;
+            this.Name = "Nelilaskin";
+            this.Text = "Nelilaskin";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
