@@ -254,6 +254,7 @@
             this.btn_equal.TabIndex = 10;
             this.btn_equal.Text = "=";
             this.btn_equal.UseVisualStyleBackColor = true;
+            this.btn_equal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btn_equal_KeyPress);
             this.btn_equal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.setEqual);
             // 
             // outputComponent
@@ -273,7 +274,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(195, 202);
+            this.ClientSize = new System.Drawing.Size(196, 203);
             this.Controls.Add(this.outputComponent);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

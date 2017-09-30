@@ -18,8 +18,8 @@ namespace Nelilaskin
         {
             InitializeComponent();
             laskin = new Laskin();
-            //laskin.AddDigit("0");
-            this.outputComponent.Select();
+            
+
         }
 
         private void updateText(string s, bool clear = false)
@@ -196,8 +196,7 @@ namespace Nelilaskin
 
         private void window_KeyPress(object sender, KeyPressEventArgs e)
         {
-            this.Select();
-            //Console.WriteLine("pressed: " + e.KeyChar);
+            Console.WriteLine("pressed: " + (int)e.KeyChar);
             if (e.KeyChar == (char)Keys.D1) setOne(sender, e);
             else if (e.KeyChar == (char)Keys.D2) setTwo(sender, e);
             else if (e.KeyChar == (char)Keys.D3) setThree(sender, e);
@@ -212,10 +211,8 @@ namespace Nelilaskin
             else if (e.KeyChar == '-') setSubtraction(sender, e);
             else if (e.KeyChar == '*') setMultiplication(sender, e);
             else if (e.KeyChar == '/') setDivision(sender, e);
-            else if (e.KeyChar == 'r')
+            else if (e.KeyChar == (char)Keys.Space || e.KeyChar == '\n')
             {
-                //this.btn_equal.Select();
-                //Console.WriteLine("ENTER");
                 setEqual();
             }
             else if (e.KeyChar == (char)Keys.Escape) clearAll(sender, e);
@@ -393,44 +390,41 @@ namespace Nelilaskin
 
         private void resetButtons()
         {
-            btn_equal.Enabled = false;
-            btn_equal.Enabled = true;
-            btn_1.Enabled = false;
-            btn_1.Enabled = true;
-            btn_2.Enabled = false;
-            btn_2.Enabled = true;
-            btn_3.Enabled = false;
-            btn_3.Enabled = true;
-            btn_4.Enabled = false;
-            btn_4.Enabled = true;
-            btn_5.Enabled = false;
-            btn_5.Enabled = true;
-            btn_6.Enabled = false;
-            btn_6.Enabled = true;
-            btn_7.Enabled = false;
-            btn_7.Enabled = true;
-            btn_8.Enabled = false;
-            btn_8.Enabled = true;
-            btn_9.Enabled = false;
-            btn_9.Enabled = true;
-            btn_0.Enabled = false;
-            btn_0.Enabled = true;
-            btn_addition.Enabled = false;
-            btn_addition.Enabled = true;
-            btn_subtraction.Enabled = false;
-            btn_subtraction.Enabled = true;
-            btn_multiplication.Enabled = false;
-            btn_multiplication.Enabled = true;
-            btn_division.Enabled = false;
-            btn_division.Enabled = true;
-            btn_clear.Enabled = false;
-            btn_clear.Enabled = true;
-            btn_fraction.Enabled = false;
-            btn_fraction.Enabled = true;
-            //btn_.Enabled = true;
-            //btn_.Enabled = false;
-            //btn_.Enabled = true;
-
+            //btn_equal.Enabled = false;
+            //btn_equal.Enabled = true;
+            //btn_1.Enabled = false;
+            //btn_1.Enabled = true;
+            //btn_2.Enabled = false;
+            //btn_2.Enabled = true;
+            //btn_3.Enabled = false;
+            //btn_3.Enabled = true;
+            //btn_4.Enabled = false;
+            //btn_4.Enabled = true;
+            //btn_5.Enabled = false;
+            //btn_5.Enabled = true;
+            //btn_6.Enabled = false;
+            //btn_6.Enabled = true;
+            //btn_7.Enabled = false;
+            //btn_7.Enabled = true;
+            //btn_8.Enabled = false;
+            //btn_8.Enabled = true;
+            //btn_9.Enabled = false;
+            //btn_9.Enabled = true;
+            //btn_0.Enabled = false;
+            //btn_0.Enabled = true;
+            //btn_addition.Enabled = false;
+            //btn_addition.Enabled = true;
+            //btn_subtraction.Enabled = false;
+            //btn_subtraction.Enabled = true;
+            //btn_multiplication.Enabled = false;
+            //btn_multiplication.Enabled = true;
+            //btn_division.Enabled = false;
+            //btn_division.Enabled = true;
+            //btn_clear.Enabled = false;
+            //btn_clear.Enabled = true;
+            //btn_fraction.Enabled = false;
+            //btn_fraction.Enabled = true;
+            //this.btn_equal.Select();
         }
 
         private void removeLastDigit(object sender, MouseEventArgs e)
@@ -446,6 +440,19 @@ namespace Nelilaskin
                 int pos = outputComponent.Text.Length-1;
                 updateText(outputComponent.Text.Remove(pos), true);
             }
+        }
+
+        private void btn_equal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+
+            if (laskin.Calculate())
+            {
+                updateText(laskin.GetResult(), true);
+            }
+            }
+            resetButtons();
         }
     }
 }
