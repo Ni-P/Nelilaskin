@@ -15,23 +15,25 @@ namespace Nelilaskin
         private Operations _currentOp;
         private string _firstNumber;
         private string _secondNumber;
-        private int _firstInt;
         private double _firstDouble;
-        private int _secondInt;
         private double _secondDouble;
         public Boolean isFloating;
         
         public Laskin() {
             _result = 0;
-            Operations _currentOp = 0;
+            _currentOp = 0;
             _firstNumber = String.Empty;
+            _firstDouble = 0;
             _secondNumber = String.Empty;
-            isFloating = true;
+            _secondDouble = 0;
+            isFloating = true; // this is redundant currently but must be true
         }
 
         public void ClearAll() {
             _firstNumber = String.Empty;
+            _firstDouble = 0;
             _secondNumber = String.Empty;
+            _secondDouble = 0;
             _currentOp = 0;
         
         }
@@ -90,7 +92,6 @@ namespace Nelilaskin
                 }
             }
 
-            //return false;
         }
 
         public Boolean Calculate()
@@ -172,7 +173,7 @@ namespace Nelilaskin
             return _result.ToString();
         } 
 
-        public Boolean undoEntry()
+        public Boolean UndoEntry()
         {
             if(_secondNumber.Equals(String.Empty)) // at entering second value
             {

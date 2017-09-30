@@ -84,7 +84,7 @@
             this.btn_7.TabIndex = 6;
             this.btn_7.Text = "7";
             this.btn_7.UseVisualStyleBackColor = true;
-            this.btn_7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.setSeven);
+            this.btn_7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SetSeven);
             // 
             // btn_8
             // 
@@ -94,7 +94,7 @@
             this.btn_8.TabIndex = 7;
             this.btn_8.Text = "8";
             this.btn_8.UseVisualStyleBackColor = true;
-            this.btn_8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.setEight);
+            this.btn_8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SetEight);
             // 
             // btn_9
             // 
@@ -104,7 +104,7 @@
             this.btn_9.TabIndex = 8;
             this.btn_9.Text = "9";
             this.btn_9.UseVisualStyleBackColor = true;
-            this.btn_9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.setNine);
+            this.btn_9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SetNine);
             // 
             // btn_division
             // 
@@ -114,7 +114,7 @@
             this.btn_division.TabIndex = 14;
             this.btn_division.Text = "/";
             this.btn_division.UseVisualStyleBackColor = true;
-            this.btn_division.MouseClick += new System.Windows.Forms.MouseEventHandler(this.setDivision);
+            this.btn_division.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SetDivision);
             // 
             // btn_4
             // 
@@ -124,7 +124,7 @@
             this.btn_4.TabIndex = 3;
             this.btn_4.Text = "4";
             this.btn_4.UseVisualStyleBackColor = true;
-            this.btn_4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.setFour);
+            this.btn_4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SetFour);
             // 
             // btn_5
             // 
@@ -134,7 +134,7 @@
             this.btn_5.TabIndex = 4;
             this.btn_5.Text = "5";
             this.btn_5.UseVisualStyleBackColor = true;
-            this.btn_5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.setFive);
+            this.btn_5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SetFive);
             // 
             // btn_6
             // 
@@ -144,7 +144,7 @@
             this.btn_6.TabIndex = 5;
             this.btn_6.Text = "6";
             this.btn_6.UseVisualStyleBackColor = true;
-            this.btn_6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.setSix);
+            this.btn_6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SetSix);
             // 
             // btn_multiplication
             // 
@@ -154,7 +154,7 @@
             this.btn_multiplication.TabIndex = 13;
             this.btn_multiplication.Text = "*";
             this.btn_multiplication.UseVisualStyleBackColor = true;
-            this.btn_multiplication.MouseClick += new System.Windows.Forms.MouseEventHandler(this.setMultiplication);
+            this.btn_multiplication.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SetMultiplication);
             // 
             // btn_1
             // 
@@ -164,7 +164,7 @@
             this.btn_1.TabIndex = 0;
             this.btn_1.Text = "1";
             this.btn_1.UseVisualStyleBackColor = true;
-            this.btn_1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.setOne);
+            this.btn_1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SetOne);
             // 
             // btn_2
             // 
@@ -174,7 +174,7 @@
             this.btn_2.TabIndex = 1;
             this.btn_2.Text = "2";
             this.btn_2.UseVisualStyleBackColor = true;
-            this.btn_2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.setTwo);
+            this.btn_2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SetTwo);
             // 
             // btn_3
             // 
@@ -184,7 +184,7 @@
             this.btn_3.TabIndex = 2;
             this.btn_3.Text = "3";
             this.btn_3.UseVisualStyleBackColor = true;
-            this.btn_3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.setThree);
+            this.btn_3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SetThree);
             // 
             // btn_subtraction
             // 
@@ -194,7 +194,7 @@
             this.btn_subtraction.TabIndex = 12;
             this.btn_subtraction.Text = "-";
             this.btn_subtraction.UseVisualStyleBackColor = true;
-            this.btn_subtraction.MouseClick += new System.Windows.Forms.MouseEventHandler(this.setSubtraction);
+            this.btn_subtraction.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SetSubtraction);
             // 
             // btn_0
             // 
@@ -204,7 +204,7 @@
             this.btn_0.TabIndex = 9;
             this.btn_0.Text = "0";
             this.btn_0.UseVisualStyleBackColor = true;
-            this.btn_0.MouseClick += new System.Windows.Forms.MouseEventHandler(this.setZero);
+            this.btn_0.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SetZero);
             // 
             // btn_fraction
             // 
@@ -214,7 +214,7 @@
             this.btn_fraction.TabIndex = 15;
             this.btn_fraction.Text = ",";
             this.btn_fraction.UseVisualStyleBackColor = true;
-            this.btn_fraction.MouseClick += new System.Windows.Forms.MouseEventHandler(this.setFraction);
+            this.btn_fraction.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SetFraction);
             // 
             // btn_addition
             // 
@@ -224,7 +224,7 @@
             this.btn_addition.TabIndex = 11;
             this.btn_addition.Text = "+";
             this.btn_addition.UseVisualStyleBackColor = true;
-            this.btn_addition.MouseClick += new System.Windows.Forms.MouseEventHandler(this.setAddition);
+            this.btn_addition.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SetAddition);
             // 
             // btn_clear
             // 
@@ -234,7 +234,7 @@
             this.btn_clear.TabIndex = 16;
             this.btn_clear.Text = "CE";
             this.btn_clear.UseVisualStyleBackColor = true;
-            this.btn_clear.MouseClick += new System.Windows.Forms.MouseEventHandler(this.clearAll);
+            this.btn_clear.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ClearAll);
             // 
             // button18
             // 
@@ -244,7 +244,7 @@
             this.button18.TabIndex = 17;
             this.button18.Text = "<--";
             this.button18.UseVisualStyleBackColor = true;
-            this.button18.MouseClick += new System.Windows.Forms.MouseEventHandler(this.removeLastDigit);
+            this.button18.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RemoveLastDigit);
             // 
             // btn_equal
             // 
@@ -254,8 +254,8 @@
             this.btn_equal.TabIndex = 10;
             this.btn_equal.Text = "=";
             this.btn_equal.UseVisualStyleBackColor = true;
-            this.btn_equal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btn_equal_KeyPress);
-            this.btn_equal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.setEqual);
+            this.btn_equal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Btn_equal_KeyPress);
+            this.btn_equal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SetEqual);
             // 
             // outputComponent
             // 
@@ -282,8 +282,8 @@
             this.MaximizeBox = false;
             this.Name = "Nelilaskin";
             this.Text = "Nelilaskin";
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.window_KeyPress);
-            this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.handleEnter);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Window_KeyPress);
+            this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.HandleEnter);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
