@@ -44,7 +44,7 @@ namespace Nelilaskin
             }
             else
             {
-                if(_currentOp != 0 && _secondNumber != String.Empty)
+                if(_secondNumber != String.Empty)
                 {
                     return Calculate();
                 }
@@ -64,6 +64,7 @@ namespace Nelilaskin
             {
                 if(digit == ",")
                 {
+                    if (_firstNumber.Contains(",")) return false;
                     _firstNumber += ",";
                     _firstDouble = Double.Parse(_firstNumber+"0");
                     return true;
@@ -77,6 +78,7 @@ namespace Nelilaskin
             {
                 if (digit == ",")
                 {
+                    if (_secondNumber.Contains(",")) return false;
                     _secondNumber += ",";
                     _secondDouble = Double.Parse(_secondNumber+"0");
                     return true;
@@ -102,6 +104,7 @@ namespace Nelilaskin
                         {
                             _firstDouble += _secondDouble;
                             _result = _firstDouble;
+                            _firstNumber = _result.ToString();
                             _currentOp = 0;
                             _secondNumber = String.Empty;
                             return true;
@@ -113,6 +116,7 @@ namespace Nelilaskin
                         {
                             _firstDouble -= _secondDouble;
                             _result = _firstDouble;
+                            _firstNumber = _result.ToString();
                             _currentOp = 0;
                             _secondNumber = String.Empty;
                             return true;
@@ -126,6 +130,7 @@ namespace Nelilaskin
                         {
                             _firstDouble *= _secondDouble;
                             _result = _firstDouble;
+                            _firstNumber = _result.ToString();
                             _currentOp = 0;
                             _secondNumber = String.Empty;
                             return true;
@@ -142,6 +147,7 @@ namespace Nelilaskin
                             {
                                 _firstDouble /= _secondDouble;
                                 _result = _firstDouble;
+                                _firstNumber = _result.ToString();
                                 _currentOp = 0;
                                 _secondNumber = String.Empty;
                                 return true;
@@ -162,10 +168,43 @@ namespace Nelilaskin
 
         public string GetResult()
         {
+
             return _result.ToString();
         } 
 
-        
+        public Boolean undoEntry()
+        {
+            if(_secondNumber.Equals(String.Empty)) // at entering second value
+            {
+                if(_currentOp != 0) // if op set do nothing
+                { 
+                    return false;
+                }
+                else if(_firstNumber.Equals("0"))
+                {
+                    return false;
+                } else
+                {
+                    _firstNumber = _firstNumber.Remove(_firstNumber.Length-1);
+                    if (_firstNumber.Length == 0) _firstNumber = "0";
+                    _firstDouble = Double.Parse(_firstNumber);
+                    return true;
+                }
+            } else // at entering first value
+            {
+                if(_secondNumber.Equals("0")) {
+                    return false;
+                }
+                else
+                {
+                    _secondNumber = _secondNumber.Remove(_secondNumber.Length - 1);
+                    if (_secondNumber.Length == 0) _secondNumber = "0";
+                    _secondDouble = Double.Parse(_secondNumber);
+                    return true;
+                }
+            }
+
+        }
         
     }
 }
